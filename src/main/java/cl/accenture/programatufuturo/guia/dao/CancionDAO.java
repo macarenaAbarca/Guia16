@@ -1,10 +1,10 @@
-package dao;
+package cl.accenture.programatufuturo.guia.dao;
 
-import model.Cancion;
+import cl.accenture.programatufuturo.guia.dao.Conexion;
+import cl.accenture.programatufuturo.guia.model.Cancion;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.LinkedList;
 
 public class CancionDAO {
@@ -33,12 +33,16 @@ public class CancionDAO {
         int resultpInsert=psInsertar.executeUpdate();
     }
 
-    public void obtenerCanciones()throws Exception{
+    public LinkedList<Cancion> obtenerCanciones()throws Exception{
+        LinkedList<Cancion> cancions=new LinkedList<Cancion>();
         PreparedStatement psObtener= getConexion().obtenerConexion().prepareStatement("SELECT * FROM cancion");
         ResultSet rs=psObtener.executeQuery();
         while(rs.next()){
-            System.out.println(rs.getString("nombre"));
+            Cancion cancion=new Cancion();
+            cancion.setNombre(rs.getString("nombre"));
+            cancions.add(cancion);
         }
+        return cancions;
     }
     public LinkedList<Cancion> buscarCancion(String nombre)throws Exception{
         LinkedList<Cancion>cancions=new LinkedList<Cancion>();

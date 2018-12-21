@@ -1,4 +1,4 @@
-package dao;
+package cl.accenture.programatufuturo.guia.dao;
 
 import com.sun.org.apache.bcel.internal.generic.RETURN;
 

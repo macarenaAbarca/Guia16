@@ -1,12 +1,14 @@
-import dao.CancionDAO;
-import dao.Conexion;
-import model.Cancion;
+package cl.accenture.programatufuturo.guia;
+
+import cl.accenture.programatufuturo.guia.dao.CancionDAO;
+import cl.accenture.programatufuturo.guia.dao.Conexion;
+import cl.accenture.programatufuturo.guia.model.Cancion;
 
 import java.util.LinkedList;
 
 public class Programa {
     public static void main(String[] args) {
-        Cancion cancion=new Cancion(10,200,"lalal","lalal","lalala");
+        Cancion cancion=new Cancion(12,200,"ewewe","erer","asdasd");
 
         CancionDAO dao=new CancionDAO(new Conexion("localhost",3306,"cancion","root","mikyyuu12"));
         try {

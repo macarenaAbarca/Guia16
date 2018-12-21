@@ -1,4 +1,4 @@
-package model;
+package cl.accenture.programatufuturo.guia.model;
 
 public class Cancion {
     private int idCancion, duracion;

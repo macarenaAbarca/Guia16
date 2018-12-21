@@ -1,0 +1,6 @@
+cl\accenture\programatufuturo\guia\dao\CancionDAO.class
+cl\accenture\programatufuturo\guia\dao\Conexion.class
+cl\accenture\programatufuturo\guia\model\Cancion.class
+cl\accenture\programatufuturo\guia\Programa.class
+cl\accenture\programatufuturo\guia\App.class
+cl\accenture\programatufuturo\guia\controllers\TestController.class
